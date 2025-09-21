@@ -72,6 +72,9 @@ import struct
 
 st.title("🔢 IEEE 754 Floating-Point Explorer")
 st.write("Interactive tool to explore floating-point representations, precision, and range across different formats: float16, bfloat16, and float32.")
+st.markdown("""
+Under the converter section, you can also find explanations about the IEEE 754 standard and how bfloat16 is derived from float32.
+""")
 st.markdown("---")
 
 def format_bits(bits, group=4):
@@ -122,7 +125,7 @@ def float_to_bin(value, dtype):
 
 types = ["float16", "bfloat16", "float32"]
 selected_types = st.multiselect("Select float types to compare", types, default=["float16", "bfloat16", "float32"])
-value = st.number_input("Enter a number", value=0.1, format="%f", key="main_value")
+value = st.number_input("⭐ Enter a number to explore ⭐", value=0.1, format="%f", key="main_value")
 
 rows = []
 for dtype in selected_types:
@@ -283,9 +286,6 @@ IEEE 754 defines special bit patterns for representing infinity, NaN (Not a Numb
 These special cases are determined by the exponent and mantissa bit patterns:
 """)
 
-# Create special values demonstration
-st.markdown("#### Special Values Examples:")
-
 import math
 
 # Define special values for each type
@@ -357,4 +357,14 @@ st.markdown("""
 - **Infinity**: Results from overflow or division by zero (1.0 / 0.0)
 - **NaN**: Results from undefined operations (0.0 / 0.0, sqrt(-1), inf - inf)
 - **Signed Zero**: Important in some mathematical contexts, like branch cuts in complex analysis
+""")
+
+
+st.markdown("---")
+st.markdown("### 📚 References")
+st.markdown("""
+- [Brain Float Converter](https://flop.evanau.dev/brainfloat-converter)
+- [Floating-Point Arithmetic: Issues and Limitations (Python Docs)](https://docs.python.org/3/tutorial/floatingpoint.html)
+- [IEEE754 Tutorial: Creating the Bitstring for a Floating-Point Number](https://class.ece.iastate.edu/arun/Cpre305/ieee754/ie3.html#:~:text=For%20single%2Dprecision%20floating%2Dpoint,into%20the%20IEEE%20754%20string.)
+- [IEEE 754 (Wikipedia)](https://en.wikipedia.org/wiki/IEEE_754#:~:text=%22Round%20to%20nearest%2C%20ties%20to,only%20required%20for%20decimal%20implementations.)
 """)
