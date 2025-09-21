@@ -1,6 +1,16 @@
+---
+title: Stanford CS336 Illustrators
+emoji: 📊
+colorFrom: red
+colorTo: blue
+sdk: docker
+pinned: false
+license: mit
+---
+
 # Multi-Page Streamlit App
 
-This project is a multi-page Streamlit application. The Python environment is managed by [uv](https://github.com/astral-sh/uv).
+This project is a multi-page Streamlit application designed for Stanford CS336. The Python environment is managed by [uv](https://github.com/astral-sh/uv).
 
 ## Features
 - Multi-page navigation using Streamlit's `pages/` directory
@@ -33,6 +43,8 @@ This project is a multi-page Streamlit application. The Python environment is ma
 
 This app is configured to run on HuggingFace Spaces using Docker.
 
+#### Local Docker Testing
+
 1. **Build the Docker image**
    ```bash
    docker build -t stanford-cs336-illustrators .
@@ -45,6 +57,31 @@ This app is configured to run on HuggingFace Spaces using Docker.
 
 3. **Access the app**
    Open your browser to `http://localhost:7860`
+
+#### HuggingFace Spaces Deployment
+
+This project is configured for deployment on HuggingFace Spaces:
+
+1. **Create a new Space** on [HuggingFace Spaces](https://huggingface.co/spaces)
+2. **Select Docker** as the SDK
+3. **Clone your Space repository** and push this project to it
+4. **The Space will automatically build and deploy** using the provided Dockerfile
+
+The configuration is set in the README.md header:
+- **SDK**: Docker (uses the provided Dockerfile)
+- **Port**: 7860 (standard for HF Spaces)
+- **Health check**: Configured for Streamlit
+
+## HuggingFace Spaces Configuration
+
+This project is optimized for deployment on HuggingFace Spaces with the following configuration:
+
+- **Title**: Stanford CS336 Illustrators
+- **SDK**: Docker
+- **Port**: 7860 (Streamlit default for HF Spaces)
+- **License**: MIT
+
+The metadata is configured in the README.md header, which HuggingFace Spaces reads automatically.
 
 ## Adding Pages
 - Place additional `.py` files in the `pages/` directory.
