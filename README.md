@@ -9,6 +9,8 @@ This project is a multi-page Streamlit application. The Python environment is ma
 
 ## Quickstart
 
+### Local Development
+
 1. **Install uv**
    ```bash
    curl -Ls https://astral.sh/uv/install.sh | bash
@@ -27,6 +29,23 @@ This project is a multi-page Streamlit application. The Python environment is ma
    streamlit run app.py
    ```
 
+### Docker Deployment
+
+This app is configured to run on HuggingFace Spaces using Docker.
+
+1. **Build the Docker image**
+   ```bash
+   docker build -t stanford-cs336-illustrators .
+   ```
+
+2. **Run the container**
+   ```bash
+   docker run -p 7860:7860 stanford-cs336-illustrators
+   ```
+
+3. **Access the app**
+   Open your browser to `http://localhost:7860`
+
 ## Adding Pages
 - Place additional `.py` files in the `pages/` directory.
 - Each file will appear as a separate page in the Streamlit sidebar.
@@ -35,9 +54,14 @@ This project is a multi-page Streamlit application. The Python environment is ma
 ```
 ├── app.py
 ├── pages/
-│   ├── page1.py
-│   └── page2.py
+│   ├── LEC_2_Floating_Point_Explorer.py
+│   └── __pycache__/
+├── tests/
+│   ├── test_floating_point_explorer.py
+│   └── __pycache__/
 ├── requirements.txt
+├── Dockerfile
+├── .dockerignore
 ├── README.md
 └── .venv/
 ```
