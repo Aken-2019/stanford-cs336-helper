@@ -104,3 +104,17 @@ Before starting a new task in the above plan, update progress in the plan.
 - Work through each checklist item systematically.
 - Keep communication concise and focused.
 - Follow development best practices.
+
+## Local Development
+To run this project locally, using `uv` for environment management and tool calling.
+
+### Start the App
+```bash
+uv run streamlit run app.py
+```
+
+### Run tests
+```bash
+uv run pytest ./tests
+```
+
