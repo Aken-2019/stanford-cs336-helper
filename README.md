@@ -1,5 +1,5 @@
 ---
-title: Stanford CS336 Illustrators
+title: Stanford CS336 Helper
 emoji: 📊
 colorFrom: red
 colorTo: blue
@@ -8,7 +8,7 @@ pinned: false
 license: mit
 ---
 
-# Stanford CS336 Illustrators
+# Stanford CS336 Helper
 
 ## Overview
 This project is a multi-page Streamlit application designed for Stanford CS336. 
