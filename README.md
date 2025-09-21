@@ -8,7 +8,7 @@ pinned: false
 license: mit
 ---
 
-# Multi-Page Streamlit App
+# Stanford CS336 Illustrators
 
 ## Overview
 This project is a multi-page Streamlit application designed for Stanford CS336. 
