@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(page_title="Multi-Page Streamlit App", page_icon="📚", layout="wide")
+st.set_page_config(page_title="CS336 Helper", page_icon="📚", layout="wide")
 st.title("Stanford CS336 Helper")
 
 st.markdown("""
